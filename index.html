@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body> 
+    <div class="sidebar">
+        
+        <ul class="menu">    
+            <li class="active">
+                <a href="dashboard.html" target="myIframe">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>DashBoard</span>
+                </a>
+            </li>
+            <li>
+                <a href="user-roles.html" target="myIframe">
+                <i class="fas fa-user"></i>
+                <span>Users & Roles</span>
+                </a>
+            </li>
+            <li>
+                <a href="children.html" target="myIframe">
+                <i class="fa-solid fa-children"></i>
+                <span>Children</span>
+                </a>
+            </li>
+            <li>
+                <a href="volunteers.html" target="myIframe">
+                <i class="fa-solid fa-people-group"></i>
+                <span>Volunteers</span>
+                </a>
+            </li>
+            <li>
+                <a href="donations.html" target="myIframe">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <span>Donations</span>
+                </a>
+            </li>
+            <li>
+                <a href="events.html" target="myIframe">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Events</span>
+                </a>
+            </li>
+            <li>
+                <a href="community.html" target="myIframe">
+                <i class="fa-solid fa-group-arrows-rotate"></i>
+                <span>Community</span>
+                </a>
+            </li>
+            <li>
+                <a href="partners.html" target="myIframe">
+                <i class="fa-solid fa-handshake"></i>
+                <span>Partners</span>
+                </a>
+            </li>
+            <li>
+                <a href="settings.html" target="myIframe">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+        
+    <div class="main--content">
+        <div class="header--wrapper">
+            
+            <div class="header--title">
+                <img src="Logo.png" alt="logo">
+                <h2>SparkPlug Foundation</h2>
+            </div>
+            <div class="user--info">
+                <div class="search--box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search"/>
+                </div>
+                <i class="fa-solid fa-user user-pic" onclick="toggleMenu()"></i>
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="profile-user.png" alt="profile">
+                            <h3>Admin</h3>
+                        </div>
+                        <hr>
+                        <a href="#" class="sub-menu-link">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <p>Edit Profile</p>
+                        </a>
+                        <a href="adminlogin.html" class="sub-menu-link">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <p>Logout</p>
+                        </a>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!--Edit Profile Modal-->
+
+        <!--iframe to display the rest of the tabs-->
+        <div class="iframe">
+            <iframe src="dashboard.html" width="100%" height="900" name="myIframe" id="myIframe" scrolling="yes"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

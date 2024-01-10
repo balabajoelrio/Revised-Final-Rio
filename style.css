@@ -1,0 +1,609 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Login Interface*/
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+a:hover{
+    color: #3ac6e1 !important;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2rem;
+}
+.img{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.img img{
+    width: 500px;
+}
+
+.login-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.title-container{
+    text-align: left;
+    padding-bottom: 40px;
+}
+
+.title-container h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: none;
+    margin: 2px 0;
+    color: #f660c9;
+}
+.title-container p{
+    font-size: 15px;
+    font-weight: 500;
+
+}
+.login-inner-content{
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 26px -6px rgba(0,0,0,0.10);
+}
+.login-content .input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 5px;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+.login-content .input-div.one{
+    margin-top: 0;
+}
+
+.i{
+    color: #d9d9d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i i{
+    transition: .3s;
+}
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+.input-div > div > h5{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 15px;
+    transition: .3s;
+    font-weight: 500;
+}
+.input-div:before, .input-div:after{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #190933;
+    transition: .4s;
+}
+.input-div:before{
+    right: 50%;
+}
+.input-div:after{
+    left: 50%;
+}
+.input-div.focus:before, .input-div.focus:after{
+    width: 50%;
+}
+
+.input-div.focus > div > h5{
+    top: 3px;
+    font-size: 10px;
+    font-weight: 500;
+}
+.input-div > div > input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 15px;
+    color: #555;
+    font-family: 'poppins', sans-serif;
+}
+.input-div.pass{
+    margin-bottom: 4px;
+}
+
+.login-inner-content a{
+    display: block;
+    text-align: right;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: .3s;
+}
+.btn{
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #f660c9, #241935, #3ac6e1 );
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'poppins',sans-serif;
+    margin: 1rem 0;
+    cursor: pointer;
+    transition: .5s;
+}
+.btn:hover{
+    background-position: right;
+}
+
+h5{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 1050px){
+    .container{
+        grid-gap: 5rem;
+    }
+}
+@media screen and (max-width: 1000px){
+   .title-container h2{
+       font-size: 25px !important;
+   }
+   form{
+       width: 290px;
+   }
+   .login-content h2{
+       font-size: 2.4rem;
+       margin: 8px 0;
+   }
+   .img img{
+       width: 400px;
+   }
+}
+@media screen and (max-width: 900px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .img{
+        display: none;
+
+    }
+    .login-content{
+        justify-content: center;
+    }
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    overflow: hidden;
+}
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+.sidebar:hover {
+    width: 300px;
+    transition: 0.5s;
+}
+
+.logo img {
+    height: 80px; 
+    margin: 5px;
+}
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+.menu li:hover, .active{
+    background: #e0e0e058;
+}
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.menu a span {
+    overflow: hidden;
+}
+.menu a i {
+    font-size: 1.2rem;
+} 
+
+
+
+/* main body section */
+.main--content {
+    position: relative;
+    background-color: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+}
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 1opx;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+.header--title {
+    color: rgba(113, 99, 186, 255);
+    padding: 4;
+    display: flex;
+    align-items: center;
+}
+
+/*Profile dropdown*/
+.user--info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.user--info i {
+    font-size: 30px;
+    border-radius: 50%;
+    background: scroll;
+    cursor: pointer;
+}
+
+/*Profile dropdown menu link*/
+.sub-menu-wrap {
+    position:absolute;
+    top: 9.5%;
+    right: 6px;
+    width: 320px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.3s;
+}
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+
+.sub-menu {
+    background: #fcfcfc;
+    padding: 20px;
+    margin: 10px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+}
+.user-info h3 {
+    font-weight: 500;
+}
+.user-info img {
+    width: 50px;
+    margin-right: 15px;
+}
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+    gap: 1rem;
+}
+.sub-menu-link:hover p {
+    transform: translateX(5px);
+    transition: transform 0.2s;
+    font-weight: 600;
+}
+
+/*Search Box*/
+.search--box {
+    background: rgb(237, 237, 237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+.search--box input {
+    background: transparent;
+    padding: 10px;
+}
+.search--box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+.search--box i:hover{
+    transform: scale(1.2);
+}
+
+/* card container*/
+.dashboard--content {
+    background:#ebe9e9;
+}
+.card--container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.main--title {
+    color: rgba(113, 99, 186, 255);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+.payment--card{
+    background: rgb(229, 223, 223);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .5s ease-in-out;
+}
+
+.payment--card:hover {
+    transform: translateY(-5px);
+}
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-size: 12px;
+    font-weight: 200;
+}
+.amount--value {
+    font-size: 24px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+}
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: red;
+}
+.card-detail {
+    font-size: 18px;
+    color: #777777;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*color css*/
+.light-red {
+    background: rgb(251, 233, 233);
+}
+.light-purple {
+    background: rgb(254, 226, 254);
+}
+.light-green {
+    background: rgb(235, 254, 235);
+}
+.light-blue {
+    background: rgb(236, 236, 254);
+}
+.light-yellow {
+    background: rgb(255, 238, 155);
+}
+.light-orange {
+    background: rgb(242, 204, 132);
+}
+.dark-red {
+    background: red;
+}
+.dark-purple {
+    background: purple;
+}
+.dark-green {
+    background: green;
+}
+.dark-blue {
+    background: blue;
+}
+.dark-yellow {
+    background: rgb(153, 137, 14);
+}
+.dark-orange {
+    background: orange;
+}
+
+/*tabular section*/
+.tabular--wrapper {
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 2rem;
+}
+.table--container {
+    width: 100%;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+thead {
+    background: rgba(113, 99, 186, 255);
+    color: #fff;
+}
+th {
+    padding: 15px;
+    text-align: left;
+}
+tbody {
+    background: #f2f2f2;
+}
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+}
+tr:nth-child(even) {
+    background: #fff;
+}
+tfoot {
+    background: rgba(113, 99, 186, 255);
+    font-weight: bold;
+    color: #fff;
+}
+tfoot td {
+    padding: 15px;
+    color: #fff;
+}
+.table--container button {
+    color: green;
+    background: none;
+    cursor: pointer;
+}
+
+/* user-roles */
+.user--roles {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* childre tab */
+.children--content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* volunteers tab */
+.volunteers--content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* donations tab */
+.donations--content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* events tab */
+.events--content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* community tab */
+.community--content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* partners tab */
+.partners--content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+/* settings tab */
+.settings--content {
+    background: #fff;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
